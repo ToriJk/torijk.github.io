@@ -69,7 +69,7 @@ html, body {
 }
 
 .btn__yes + .btn__no {
-    margin-left: 65px;
+    margin-left: 200px;
 }
 
 .btn__yes, .btn__no {
