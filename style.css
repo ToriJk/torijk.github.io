@@ -60,6 +60,7 @@ html, body {
 }
 
 .btns {
+    position: relative; /* Задаём позиционирование для контейнера */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -86,9 +87,10 @@ html, body {
 }
 
 .btn__no {
-    position: relative; /* Меняем позиционирование на relative */
+    position: absolute;
+    right: 0; /* Задаем отступ от правого края контейнера */
     transition: all 0.1s linear;
-    margin-left: 20px; /* Устанавливаем фиксированный отступ */
+    max-width: 150px;
 }
 
 /* Медиа-запрос для телефонов */
