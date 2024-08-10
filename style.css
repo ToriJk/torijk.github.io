@@ -60,7 +60,6 @@ html, body {
 }
 
 .btns {
-    position: relative; /* Задаём позиционирование для контейнера */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -88,7 +87,6 @@ html, body {
 
 .btn__no {
     position: absolute;
-    right: 0; /* Задаем отступ от правого края контейнера */
     transition: all 0.1s linear;
 }
 
