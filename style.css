@@ -62,14 +62,12 @@ html, body {
 .btns {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 100px;
+    justify-content: center; /* Центрируем кнопки */
+    gap: 20px; /* Уменьшаем gap для кнопок */
     width: 100%;
     max-width: 400px;
 }
-.btn__yes  + .btn__no{
-    margin-left: 65px;
-}
+
 .btn__yes, .btn__no {
     text-decoration: none;
     padding: 12px 20px;
@@ -82,11 +80,12 @@ html, body {
     max-width: 150px;
     box-sizing: border-box;
 }
+
 .btn__yes {
-    margin-right: 65px; /* Увеличиваем расстояние между кнопками */
+    margin-right: 0; /* Убираем margin-right */
 }
+
 .btn__no {
-    position: absolute;
     transition: all 0.1s linear;
 }
 
@@ -94,16 +93,16 @@ html, body {
 @media (max-width: 600px) {
     .btns {
         flex-direction: column;
-        gap: 10px;
+        gap: 10px; /* Уменьшаем gap между кнопками */
     }
 
     .btn__yes, .btn__no {
-        max-width: none;
+        max-width: 80%; /* Ограничиваем максимальную ширину кнопок */
         padding: 10px;
     }
 
     .main {
-        padding: 20px;
+        padding: 10px; /* Уменьшаем padding для мобильных устройств */
     }
 
     .title {
