@@ -59,26 +59,27 @@ html, body {
     align-items: center;
 }
 
-.btns {
+.btns{
     display: flex;
-    flex-direction: row; /* Кнопки располагаются в один ряд */
-    justify-content: space-between; /* Пространство между кнопками */
-    gap: 20px; /* Расстояние между кнопками */
-    width: 100%;
-    max-width: 400px;
+    width: 105 px;
 }
 
-.btn__yes, .btn__no {
+.btn__yes  + .btn__no{
+    margin-left: 65px;
+}
+
+.btn__yes, .btn__no{
     text-decoration: none;
-    padding: 12px 20px;
+    padding: 6px;
     border: 1px solid #ad4040;
     border-radius: 15px;
     color: #ad4040;
     background-color: azure;
-    text-align: center;
-    width: 100%;
-    max-width: 150px;
-    box-sizing: border-box;
+}
+
+.btn__no{
+    position: absolute;
+    transition: all .1s linear;
 }
 
 /* Медиа-запрос для телефонов */
