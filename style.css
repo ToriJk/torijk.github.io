@@ -67,7 +67,9 @@ html, body {
     width: 100%;
     max-width: 400px;
 }
-
+.btn__yes  + .btn__no{
+    margin-left: 65px;
+}
 .btn__yes, .btn__no {
     text-decoration: none;
     padding: 12px 20px;
