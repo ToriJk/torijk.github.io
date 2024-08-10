@@ -61,10 +61,6 @@ html, body {
     transition: transform 0.2s ease;
 }
 
-.btn__yes:hover, .btn__no:hover {
-    transform: scale(1.05); /* Немного увеличиваем размер кнопки при наведении */
-}
-
 .title {
     font-size: 5vw;
     text-align: center;
