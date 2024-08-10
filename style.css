@@ -81,12 +81,10 @@ html, body {
     box-sizing: border-box;
 }
 
-.btn__yes {
-    margin-right: 0; /* Убираем margin-right */
-}
 
-.btn__no {
-    transition: all 0.1s linear;
+.btn__no{
+    position: absolute;
+    transition: all .1s linear;
 }
 
 /* Медиа-запрос для телефонов */
