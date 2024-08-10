@@ -55,7 +55,7 @@ html, body {
     border-radius: 15px;
     color: #ad4040;
     background-color: azure;
-    transition: transform 0.2s ease; /* Плавный эффект для кнопок */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Плавное изменение для эффекта наведения */
 }
 
 .btn__no {
