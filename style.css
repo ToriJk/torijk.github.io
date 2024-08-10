@@ -90,7 +90,6 @@ html, body {
     position: absolute;
     right: 0; /* Задаем отступ от правого края контейнера */
     transition: all 0.1s linear;
-    max-width: 150px;
 }
 
 /* Медиа-запрос для телефонов */
