@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-html, body {
+body {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     margin: 0;
@@ -11,17 +11,22 @@ html, body {
     justify-content: center;
     align-items: center;
     background-color: #f0f0f0;
-    flex-direction: column;
-    overflow: hidden; /* Отключаем скроллинг */
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .main {
     width: 100%;
-    height: 100%; /* Занимаем всю доступную высоту */
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     background-image: url('./i.webp');
     background-size: cover;
     background-position: center;
@@ -30,17 +35,41 @@ html, body {
     box-sizing: border-box;
 }
 
+.choise {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение кнопок */
+    align-items: center;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение кнопок */
+    gap: 10px; /* Расстояние между кнопками */
+    align-items: center;
+}
+
+.btn__yes, .btn__no {
+    text-decoration: none;
+    padding: 12px 20px;
+    border: 1px solid #ad4040;
+    border-radius: 15px;
+    color: #ad4040;
+    background-color: azure;
+    transition: transform 0.2s ease; /* Плавный эффект для кнопок */
+}
+
+.btn__no {
+    transition: transform 0.2s ease;
+}
+
+.btn__yes:hover, .btn__no:hover {
+    transform: scale(1.05); /* Немного увеличиваем размер кнопки при наведении */
+}
+
 .title {
     font-size: 5vw;
     text-align: center;
     color: rgb(0, 0, 3);
-    margin-bottom: 20px;
-}
-
-.another_title {
-    font-size: 4vw;
-    text-align: center;
-    color: rgb(22, 6, 19);
     margin-bottom: 20px;
 }
 
@@ -51,53 +80,15 @@ html, body {
     margin-bottom: 20px;
 }
 
-.choise {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
+.another_title {
+    font-size: 4vw;
+    text-align: center;
+    color: rgb(22, 6, 19);
+    margin-bottom: 20px;
 }
 
-.btns{
-    display: flex;
-    width: 105 px;
-}
-
-.btn__yes  + .btn__no{
-    margin-left: 65px;
-}
-
-.btn__yes, .btn__no{
-    text-decoration: none;
-    padding: 6px;
-    border: 1px solid #ad4040;
-    border-radius: 15px;
-    color: #ad4040;
-    background-color: azure;
-}
-
-.btn__no{
-    position: absolute;
-    transition: all .1s linear;
-}
-
-/* Медиа-запрос для телефонов */
+/* Медиа-запрос для мобильных устройств */
 @media (max-width: 600px) {
-    .btns {
-        flex-direction: column; /* Вертикальное расположение кнопок */
-        gap: 10px;
-    }
-
-    .btn__yes, .btn__no {
-        max-width: 100%; /* Кнопки занимают всю доступную ширину */
-        padding: 10px;
-    }
-
-    .main {
-        padding: 20px;
-    }
-
     .title {
         font-size: 6vw;
     }
@@ -109,5 +100,16 @@ html, body {
     .image_class {
         width: 90%;
         max-width: none;
+    }
+
+    .btns {
+        flex-direction: column; /* Вертикальное расположение кнопок */
+        gap: 10px; /* Уменьшите значение gap, если нужно */
+        width: 100%; /* Кнопки занимают всю доступную ширину */
+    }
+
+    .btn__yes, .btn__no {
+        max-width: 100%; /* Кнопки занимают всю доступную ширину */
+        padding: 10px;
     }
 }
