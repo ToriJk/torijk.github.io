@@ -63,13 +63,9 @@ html, body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 40px;
+    gap: 100px;
     width: 100%;
     max-width: 400px;
-}
-
-.btn__yes + .btn__no {
-    margin-left: 200px;
 }
 
 .btn__yes, .btn__no {
