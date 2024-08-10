@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-body {
+html, body {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     margin: 0;
@@ -11,22 +11,17 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #f0f0f0;
-}
-
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    flex-direction: column;
+    overflow: hidden; /* Отключаем скроллинг */
 }
 
 .main {
     width: 100%;
-    height: 100%;
+    height: 100%; /* Занимаем всю доступную высоту */
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background-image: url('./i.webp');
     background-size: cover;
     background-position: center;
@@ -35,47 +30,10 @@ html, body {
     box-sizing: border-box;
 }
 
-.choise {
-    display: flex;
-    flex-direction: column; /* Вертикальное расположение кнопок */
-    align-items: center;
-}
-
-.btns {
-    display: flex;
-    flex-direction: column; /* Вертикальное расположение кнопок */
-    gap: 10px; /* Расстояние между кнопками */
-    align-items: center;
-}
-
-.btn__yes  + .btn__no{
-    margin-left: 65px;
-}
-
-.btn__yes, .btn__no {
-    text-decoration: none;
-    padding: 12px 20px;
-    border: 1px solid #ad4040;
-    border-radius: 15px;
-    color: #ad4040;
-    background-color: azure;
-}
-
-.btn__no {
-    transition: transform 0.2s ease;
-}
-
 .title {
     font-size: 5vw;
     text-align: center;
     color: rgb(0, 0, 3);
-    margin-bottom: 20px;
-}
-
-.image_class {
-    width: 80%;
-    max-width: 500px;
-    height: auto;
     margin-bottom: 20px;
 }
 
@@ -86,8 +44,68 @@ html, body {
     margin-bottom: 20px;
 }
 
-/* Медиа-запрос для мобильных устройств */
+.image_class {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.choise {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.btn__yes + .btn__no {
+    margin-left: 65px;
+}
+
+.btn__yes, .btn__no {
+    text-decoration: none;
+    padding: 12px 20px;
+    border: 1px solid #ad4040;
+    border-radius: 15px;
+    color: #ad4040;
+    background-color: azure;
+    text-align: center;
+    width: 100%;
+    max-width: 150px;
+    box-sizing: border-box;
+}
+
+.btn__no {
+    position: absolute;
+    transition: all 0.1s linear;
+}
+
+/* Медиа-запрос для телефонов */
 @media (max-width: 600px) {
+    .btns {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn__yes, .btn__no {
+        max-width: none;
+        padding: 10px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
     .title {
         font-size: 6vw;
     }
@@ -99,16 +117,5 @@ html, body {
     .image_class {
         width: 90%;
         max-width: none;
-    }
-
-    .btns {
-        flex-direction: column; /* Вертикальное расположение кнопок */
-        gap: 10px; /* Уменьшите значение gap, если нужно */
-        width: 100%; /* Кнопки занимают всю доступную ширину */
-    }
-
-    .btn__yes, .btn__no {
-        max-width: 100%; /* Кнопки занимают всю доступную ширину */
-        padding: 10px;
     }
 }
