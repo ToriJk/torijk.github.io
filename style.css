@@ -59,13 +59,9 @@ html, body {
     align-items: center;
 }
 
-.btns {
+.btns{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-    width: 100%;
-    max-width: 400px;
+    width: 105 px;
 }
 
 .btn__yes + .btn__no {
@@ -85,9 +81,9 @@ html, body {
     box-sizing: border-box;
 }
 
-.btn__no {
+.btn__no{
     position: absolute;
-    transition: all 0.1s linear;
+    transition: all .1s linear;
 }
 
 /* Медиа-запрос для телефонов */
