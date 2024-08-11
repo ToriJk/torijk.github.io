@@ -3,43 +3,35 @@
 body {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 html, body {
     width: 100%;
-    height: 100%;
     display: flex;
+    height: 100%;
     padding: 0;
     margin: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 .main {
     width: 100%;
-    height: 100vh; /* Ensure the main container takes up the full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url('./i.webp');
-    background-size: cover; /* Ensures the image covers the entire area */
-    background-repeat: no-repeat; /* Prevents the background from repeating */
-    background-position: center center; /* Centers the background image */
-    padding: 10px;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
     box-sizing: border-box;
-    position: relative; /* Makes the main container the reference for absolutely positioned children */
+    flex-direction: column;
 }
 
 .choise {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
 }
 
 .btns {
@@ -47,11 +39,10 @@ html, body {
     justify-content: space-between;
     width: 100%;
     max-width: 300px;
-    position: relative; /* Ensures buttons are positioned relative to this container */
 }
 
 .btn__yes + .btn__no {
-    margin-left: 65px;
+    margin-left: 20px;
 }
 
 .btn__yes, .btn__no {
@@ -61,90 +52,67 @@ html, body {
     border-radius: 15px;
     color: #ad4040;
     background-color: azure;
-    font-size: 18px;
-    width: 100px;
+    flex: 1;
     text-align: center;
     box-sizing: border-box;
 }
 
 .btn__no {
-    position: absolute;
-    transition: all .1s linear;
-    top: 0;
-    left: 0;
-    /* Random initial position within the .main container */
-}
-
-.btn__no:hover {
-    top: calc(100% * var(--random-y));
-    left: calc(100% * var(--random-x));
-    transform: translate(-50%, -50%);
+    position: relative;
+    transition: all 0.1s linear;
 }
 
 .title {
-    font-size: 5vw; /* Adjusts font size relative to the viewport width */
+    font-size: 6vw;
     text-align: center;
     color: rgb(0, 0, 3);
     margin-bottom: 20px;
 }
 
-.image_class {
-    width: 80vw; /* Adjusts image size relative to the viewport width */
-    max-width: 500px; /* Ensures image doesn't exceed its original size */
-    height: auto; /* Maintains aspect ratio */
-    display: block;
-    margin: 20px auto;
-}
-
 .another_title {
-    font-size: 4vw; /* Adjusts font size relative to the viewport width */
+    font-size: 5vw;
     text-align: center;
     color: rgb(22, 6, 19);
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .btn__yes + .btn__no {
-        margin-left: 20px;
-    }
-
-    .btn__yes, .btn__no {
-        font-size: 16px;
-        padding: 8px;
-        width: 90px;
-    }
-
-    .title {
-        font-size: 6vw;
-    }
-
-    .another_title {
-        font-size: 5vw;
-    }
+.image_class {
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .main {
-        background-size: contain; /* Ensures the entire image is visible on smaller screens */
-        background-position: center top; /* Positions the image to start from the top */
-    }
-
-    .btn__yes + .btn__no {
-        margin-left: 10px;
-    }
-
-    .btn__yes, .btn__no {
-        font-size: 14px;
-        padding: 6px;
-        width: 80px;
+        padding: 10px; /* Уменьшаем padding для мобильных устройств */
     }
 
     .title {
-        font-size: 7vw;
+        font-size: 8vw; /* Увеличение размера текста для маленьких экранов */
     }
 
     .another_title {
         font-size: 6vw;
+    }
+
+    .image_class {
+        width: 100%;
+        height: auto;
+    }
+
+    .btns {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: none;
+    }
+
+    .btn__yes, .btn__no {
+        width: 100%;
+        padding: 15px;
     }
 }
