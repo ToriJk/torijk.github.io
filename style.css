@@ -72,32 +72,4 @@ html,body{
     color: rgb(22, 6, 19);
 }
 
-@media (max-width: 600px) {
-    .btns {
-        flex-direction: column;
-        gap: 10px; /* Уменьшаем gap между кнопками */
-    }
 
-    .btn__yes, .btn__no {
-        max-width: 80%; /* Ограничиваем максимальную ширину кнопок */
-        padding: 10px;
-    }
-
-    .main {
-        padding: 10px; /* Уменьшаем padding для мобильных устройств */
-    }
-
-    .title {
-        font-size: 6vw;
-    }
-
-    .another_title {
-        font-size: 5vw;
-    }
-
-    .image_class {
-        width: 90%;
-        max-width: none;
-    }
-}
-адаптировать под телефон вертикально, но функционал оставить тем же
