@@ -3,71 +3,106 @@
 body {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
 }
 
-html,body{
+html, body {
     width: 100%;
     display: flex;
     height: 100%;
-    float: 1;
     padding: 0;
     margin: 0;
 }
 
-.main{
+.main {
     width: 100%;
+    height: 100%;
     display: flex;
-    float: 1;
     justify-content: center;
     align-items: center;
     background-image: url('./i.webp');
+    background-size: cover;
+    background-position: center;
 }
 
-
-
-.choise{
+.choise {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
-.btns{
+
+.btns {
     display: flex;
-    width: 105 px;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 300px; /* Adaptable size */
 }
 
-.btn__yes  + .btn__no{
-    margin-left: 65px;
+.btn__yes + .btn__no {
+    margin-left: 5vw; /* Relative to the viewport width */
 }
 
-.btn__yes, .btn__no{
+.btn__yes, .btn__no {
     text-decoration: none;
-    padding: 6px;
+    padding: 1rem 2rem; /* Relative units */
     border: 1px solid #ad4040;
-    border-radius: 15px;
+    border-radius: 1rem; /* Relative units */
     color: #ad4040;
     background-color: azure;
+    font-size: 1.5rem; /* Relative units */
 }
 
-.btn__no{
+.btn__no {
     position: absolute;
     transition: all .1s linear;
 }
 
-
 .title {
-    font-size: 45px;
+    font-size: 4vw; /* Relative to the viewport width */
     text-align: center;
     color: rgb(0, 0, 3);
+    margin-bottom: 2vh; /* Relative to the viewport height */
 }
 
 .image_class {
-    width: 500px;
-    height: 500px;
+    width: 50vw; /* 50% of the viewport width */
+    height: auto; /* Keep the aspect ratio */
     display: block;
     margin-left: auto;
     margin-right: auto;
+    max-width: 500px; /* Maximum width */
 }
-.another_title{
-    font-size: 25px;
+
+.another_title {
+    font-size: 2.5vw; /* Relative to the viewport width */
     text-align: center;
     color: rgb(22, 6, 19);
+    margin-top: 2vh; /* Relative to the viewport height */
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 600px) {
+    .title {
+        font-size: 6vw; /* Increase font size on smaller screens */
+    }
+
+    .another_title {
+        font-size: 4vw; /* Increase font size on smaller screens */
+    }
+
+    .btn__yes, .btn__no {
+        padding: 1rem; /* Adjust padding */
+        font-size: 1.2rem; /* Adjust font size */
+    }
+
+    .image_class {
+        width: 80vw; /* Make image larger */
+    }
 }
