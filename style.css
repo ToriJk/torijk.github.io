@@ -22,7 +22,7 @@ html, body {
 
 .main {
     width: 100%;
-    height: 100%;
+    height: 100vh; /* Ensure the main container takes up the full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +32,7 @@ html, body {
     background-position: center center; /* Centers the background image */
     padding: 10px;
     box-sizing: border-box;
+    position: relative; /* Makes the main container the reference for absolutely positioned children */
 }
 
 .choise {
@@ -46,6 +47,7 @@ html, body {
     justify-content: space-between;
     width: 100%;
     max-width: 300px;
+    position: relative; /* Ensures buttons are positioned relative to this container */
 }
 
 .btn__yes + .btn__no {
@@ -68,6 +70,15 @@ html, body {
 .btn__no {
     position: absolute;
     transition: all .1s linear;
+    top: 0;
+    left: 0;
+    /* Random initial position within the .main container */
+}
+
+.btn__no:hover {
+    top: calc(100% * var(--random-y));
+    left: calc(100% * var(--random-x));
+    transform: translate(-50%, -50%);
 }
 
 .title {
