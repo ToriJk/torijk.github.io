@@ -27,8 +27,9 @@ html, body {
     justify-content: center;
     align-items: center;
     background-image: url('./i.webp');
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+    background-position: center center; /* Centers the background image */
     padding: 10px;
     box-sizing: border-box;
 }
@@ -113,6 +114,11 @@ html, body {
 }
 
 @media (max-width: 480px) {
+    .main {
+        background-size: contain; /* Ensures the entire image is visible on smaller screens */
+        background-position: center top; /* Positions the image to start from the top */
+    }
+
     .btn__yes + .btn__no {
         margin-left: 10px;
     }
