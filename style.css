@@ -100,8 +100,8 @@ html, body {
     }
 
     .btn__yes, .btn__no {
-        max-width: 80%;
-        padding: 20px;
+        max-width: 60%;
+        padding: 10px;
     }
 
     .main {
@@ -124,8 +124,8 @@ html, body {
 
 @media (max-width: 479px) {
     .btn__yes, .btn__no {
-        max-width: 80%;
-        padding: 20px;
+        max-width: 50%;
+        padding: 8px;
     }
 
     .title {
