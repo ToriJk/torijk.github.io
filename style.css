@@ -23,6 +23,7 @@ html, body {
     background-repeat: no-repeat;
     padding: 20px;
     box-sizing: border-box;
+    min-height: 100vh; /* Обеспечивает корректное отображение фона */
 }
 
 .choise {
@@ -34,15 +35,14 @@ html, body {
 
 .btns {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: column; /* Кнопки будут располагаться друг под другом */
+    align-items: center;
+    gap: 10px; /* Расстояние между кнопками */
     width: 100%;
     max-width: 400px;
 }
-.btn__yes  + .btn__no{
-    margin-left: 320px;
-}
+
+
 
 .btn__yes, .btn__no {
     text-decoration: none;
@@ -58,9 +58,18 @@ html, body {
     transition: all 0.1s linear;
 }
 
+
+
+.btn__yes {
+    position: relative;
+}
+
 .btn__no {
     position: absolute;
+    top: 695px; /* Измените значение по необходимости */
 }
+
+
 
 .title {
     font-size: 5vw;
@@ -87,8 +96,7 @@ html, body {
 
 @media (max-width: 767px) {
     .btns {
-        flex-direction: column;
-        gap: 10px;
+        gap: 10px; /* Расстояние между кнопками */
     }
 
     .btn__yes, .btn__no {
